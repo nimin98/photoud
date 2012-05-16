@@ -1,4 +1,12 @@
 Photoud::Application.routes.draw do
+  get "dropbox/authorize"
+
+  get "dropbox/upload"
+
+  get "dropboxes/authorize"
+
+  get "dropboxes/upload"
+
 #  get "users/new"
 #  get "static_pages/home"
 #  get "static_pages/help"
@@ -9,6 +17,10 @@ Photoud::Application.routes.draw do
   match '/about',  to: 'static_pages#about'
   match '/contact',to: 'static_pages#contact'
   match '/signup', to: 'users#new'
+  match '/connect',to: 'static_pages#connect'
+
+  match '/authorize', to: 'dropbox#authorize'
+  match '/upload',    to: 'dropbox#upload'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

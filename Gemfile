@@ -4,6 +4,8 @@ gem 'rails',         '3.2.3'
 gem 'bootstrap-sass','2.0.0'
 gem 'pg'
 gem 'jquery-rails',  '2.0.0'
+gem 'dropbox-sdk'
+gem 'oauth'
 
 group :development do
   gem 'rspec-rails', '2.9.0'
